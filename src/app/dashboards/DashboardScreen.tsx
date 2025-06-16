@@ -1,7 +1,7 @@
 // src/components/dashboard/DashboardScreen.tsx
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ScrollView, Alert, Dimensions } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import { useFocusEffect, useNavigation } from '@react-navigation/native';
 import { DashboardService } from '../../services/dashboardService';
 import { BarChart, PieChart } from 'react-native-chart-kit';
 
@@ -15,9 +15,11 @@ export default function DashboardScreen() {
 
   const screenWidth = Dimensions.get('window').width - 32;
 
-  useEffect(() => {
-    loadDashboard();
-  }, []);
+  useFocusEffect(
+    useCallback(() => {
+      loadDashboard();
+    }, []
+  ));
 
   const loadDashboard = async () => {
     try {
