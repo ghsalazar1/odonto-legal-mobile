@@ -32,7 +32,7 @@ export default function LoadingScreen() {
   return (
     <View style={styles.container}>
       <Animated.Image
-        source={require('../../assets/splash.png')} // Aqui você coloca o caminho da sua imagem splash
+        source={require('../../assets/imagens/odonto-legal-splash.png')} // Aqui você coloca o caminho da sua imagem splash
         style={[
           styles.logo,
           {

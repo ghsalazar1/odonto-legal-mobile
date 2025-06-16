@@ -14,6 +14,7 @@ import {
 import { useFocusEffect, useNavigation } from '@react-navigation/native';
 import { AuthContext } from '../../context/AuthContext';
 import { CasesService } from '../../services/casesService';
+import LoadingScreen from '../LoadingScreen';
 
 interface Case {
   id: string;
@@ -246,12 +247,13 @@ export default function CasesListScreen() {
       </TouchableOpacity>
 
       {loading ? (
-        <ActivityIndicator size="large" color="#4BCCA6" />
+        <LoadingScreen />
       ) : filteredCases.length > 0 ? (
         <FlatList data={filteredCases} keyExtractor={(item) => item.id.toString()} renderItem={renderItem} />
       ) : (
         <Text style={styles.noResults}>Nenhum caso encontrado</Text>
       )}
+
 
       {/* Modal Finalizar Caso */}
       <Modal visible={showFinalizeModal} transparent animationType="slide">
