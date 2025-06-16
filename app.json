@@ -1,0 +1,29 @@
+{
+  "expo": {
+    "name": "Odonto Legal Mobile",
+    "slug": "odonto-legal-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/imagens/odonto-legal-icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/imagens/odonto-legal-splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "edgeToEdgeEnabled": true
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
